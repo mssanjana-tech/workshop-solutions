@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background: #1e1e1f;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 1000px;
+    height: 600px;
+    background: #ffffff;
+    box-shadow: 0 30px 50px #000000;
+    }
+    .slider-container {
+        overflow: hidden;
+      }
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #000000;
+    background-position: 50% 50%;
+    background-size: cover; 
+    display: inline-block;
+    transition: 0s;
+}
+/* Your existing CSS code here */
+
+/* Media Queries */
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      height: 400px;
+    }
+    .slide .item {
+      width: 150px;
+      height: 200px;
+    }
+    .item .content {
+      width: 200px;
+    }
+  }
+  
+  /* For screens smaller than 480px */
+  @media only screen and (max-width: 480px) {
+    .container {
+      width: 80%;
+      height: 300px;
+    }
+    .slide .item {
+      width: 100px;
+      height: 150px;
+    }
+    .item .content {
+      width: 150px;
+    }
+  }
+
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 103%;
+}
+.slide .item:nth-child(4){
+    left: calc(103% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(103% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(103% + 660px);
+    opacity: 0;
+}
+
+.item .content{
+    position: absolute;
+    top: 30%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #ffffff;
+    transform: translate(0, -50%);
+    font-family: 'Open Sans', sans-serif;;
+    display: none;
+}
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    opacity: 0;
+    color: #fff;
+    background-color: #000;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+.content button:hover{
+    background-color: #545353;
+    color: #fff;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #6b6a6a;
+    color: #fff;
+}
+.confitti-button:hover{
+    background-color: #000;
+}
+.confitti-button:active{
+    background-color: #000;
+}
+.button-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.button-wrapper canvas {
+    position: absolute;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .button {
+    
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button-container {
+    text-align: bottom;
+
+  }
+  
+  button {
+    color: #040404;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }

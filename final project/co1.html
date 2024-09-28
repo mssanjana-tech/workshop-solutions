@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="n.css">
+</head>
+
+<body>
+    <div class="video-container"></div>
+        <video id="video" width="100%" height="100%" autoplay muted>
+          <source src="h.mp4" type="video/mp4">
+        </video>
+
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container">
+
+        <div class="slide">
+
+            <div class="item" style="background-image: url(blank.jpg);">
+                <div class="content">
+                    <div class="name">LETS GO...➡</div>
+
+                </div>
+            </div>
+
+
+            <div class="item" style="background-image: url(IMG_1745.JPG);">
+                <div class="content">
+                    <div class="name">WAY TO COMPUTER LAB 1</div>
+                    <div class="des">Go straight and take left,</div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(IMG_1748.JPG);">
+                <div class="content">
+                    <div class="name">Take right here!</div>
+                    <div class="des"></div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(IMG_1751.JPG);">
+                <div class="content">
+                    <div class="name">Go up the stairs,till you see a above your head(Snehasethuve).</div>
+                    <div class="des"></div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(1.JPG);">
+                <div class="content">
+                    <div class="name">Here,you reached computer lab 1..!</div>
+                    <div class="des"></div>
+                    <div class="button-wrapper"></div>
+                    <button class="confetti-button">reached🥳</button>
+
+                    <div class="button-container">
+                        <a href="home.html"><button id="button1">back</button></a>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+                        <script>
+                            document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+                                let canvas = document.createElement("canvas");
+                                let container = document.getElementsByClassName("button-wrapper")[0];
+                                canvas.width = 600;
+                                canvas.height = 600;
+
+                                container.appendChild(canvas);
+
+                                let confetti_button = confetti.create(canvas);
+                                confetti_button().then(() => container.removeChild(canvas));
+                            });
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+        <script src="n.js"></script>
+
+</body>
+
+</html>

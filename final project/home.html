@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="video-container">
+        <video id="video" width="100%" height="100%" autoplay muted loop>
+            <source src="smoky.mp4" type="video/mp4">
+        </video>
+
+        <div class="text-overlay">
+            <p id="text">-CAMPUS VOYAGE-</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <p class="heading">
+                LIBRARY
+                <img src="lib.jpg" height="90%" width="130%" alt="">
+            </p>
+            <a href="n.html"><button class="button">Explore</button></a>
+        </div>
+        <div class="card">
+            <p class="heading">
+                CONFERENCE HALL
+                <img src="IMG_1863.JPG" height="90%" width="125%" alt="">
+            </p>
+            <a href="co.html"><button class="button">Explore</button></a>
+        </div>
+        <div class="card">
+            <p class="heading">
+                AUDITORIUM
+                <img src="aum1.jpg" height="90%" width="130%" alt="">
+            </p>
+            <a href="au.html"><button class="button">Explore</button></a>
+        </div>
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <i class="ri-planet-line"></i> CAMPUSVOYAGE-
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">🏚 Home</a></li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            ➡ Directions <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="of.html" class="dropdown__link">
+                                    <i class=""></i>Office room</a>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="spo.html" class="dropdown__link">
+                                    <i class=""></i> sports room</a>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="n.html" class="dropdown__link">
+                                    <i class=""></i> Library&AV romm
+                                </a>
+                            </li>
+                            <li>
+                                <a href="co.html" class="dropdown__link">
+                                    <i class=""></i> Conference hall
+                                </a>
+                            </li>
+
+                            <li></li>
+                            <a href="au.html" class="dropdown__link">
+                                <i class=""></i> Auditorium
+                            </a>
+                    </li>
+
+                    <!--=============== DROPDOWN SUBMENU ===============-->
+                    <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                            <i class="ri-bar-chart-line"></i> Lab<i class="ri-add-line dropdown__add"></i>
+                            <button title="Add New"
+                                class="group cursor-pointer outline-none hover:rotate-90 duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24"
+                                    class="stroke-zinc-400 fill-none group-hover:fill-zinc-800 group-active:stroke-zinc-200 group-active:fill-zinc-600 group-active:duration-0 duration-300">
+                                    <path
+                                        d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                        stroke-width="1.5"></path>
+                                    <path d="M8 12H16" stroke-width="1.5"></path>
+                                    <path d="M12 16V8" stroke-width="1.5"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                            <li>
+                                <a href="co1.html" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Lab1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="co2.html" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Lab2
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="co3.html" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Lab3
+                                </a>
+                            </li>
+                            <li></li>
+                            <a href="co4.html" class="dropdown__sublink">
+                                <i class="ri-cash-line"></i> Lab4
+                            </a>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+
+                <!--=============== DROPDOWN 2 ===============-->
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        🏬 Departments<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                        <li>
+                            <a href="eng.html" class="dropdown__link">
+                                <i class="ri-user-line"></i> English Department
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="kan.html" class="dropdown__link">
+                                <i class="ri-user-line"></i> Kannada Department
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+</body>
+
+</html>
